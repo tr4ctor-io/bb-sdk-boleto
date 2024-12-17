@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 /**
  * Interface abstracting model access.

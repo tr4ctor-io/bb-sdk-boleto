@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * RespostaListaBoletos Class Doc Comment
@@ -60,7 +60,7 @@ class RespostaListaBoletos implements ModelInterface, ArrayAccess
         'indicador_continuidade' => 'string',
         'quantidade_registros' => 'int',
         'proximo_indice' => 'int',
-        'boletos' => '\Swagger\Client\Model\RespostaListaBoletosBoletos[]'
+        'boletos' => '\Swagger\Client\Boleto\Model\RespostaListaBoletosBoletos[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class RespostaListaBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets boletos
      *
-     * @return \Swagger\Client\Model\RespostaListaBoletosBoletos[]
+     * @return \Swagger\Client\Boleto\Model\RespostaListaBoletosBoletos[]
      */
     public function getBoletos()
     {
@@ -305,7 +305,7 @@ class RespostaListaBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets boletos
      *
-     * @param \Swagger\Client\Model\RespostaListaBoletosBoletos[] $boletos boletos
+     * @param \Swagger\Client\Boleto\Model\RespostaListaBoletosBoletos[] $boletos boletos
      *
      * @return $this
      */

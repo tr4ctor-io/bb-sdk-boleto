@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * RespostaBoletosBaixaOperacionalTitulo Class Doc Comment
@@ -62,7 +62,7 @@ class RespostaBoletosBaixaOperacionalTitulo implements ModelInterface, ArrayAcce
         'data_registro' => 'string',
         'data_vencimento' => 'string',
         'valor_original' => 'double',
-        'agendamento_pagamento' => '\Swagger\Client\Model\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento'
+        'agendamento_pagamento' => '\Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento'
     ];
 
     /**
@@ -384,7 +384,7 @@ class RespostaBoletosBaixaOperacionalTitulo implements ModelInterface, ArrayAcce
     /**
      * Gets agendamento_pagamento
      *
-     * @return \Swagger\Client\Model\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento
+     * @return \Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento
      */
     public function getAgendamentoPagamento()
     {
@@ -394,7 +394,7 @@ class RespostaBoletosBaixaOperacionalTitulo implements ModelInterface, ArrayAcce
     /**
      * Sets agendamento_pagamento
      *
-     * @param \Swagger\Client\Model\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento $agendamento_pagamento agendamento_pagamento
+     * @param \Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento $agendamento_pagamento agendamento_pagamento
      *
      * @return $this
      */

@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * ErroOAuthNaoAutorizado Class Doc Comment
@@ -60,7 +60,7 @@ class ErroOAuthNaoAutorizado implements ModelInterface, ArrayAccess
         'status_code' => 'float',
         'error' => 'string',
         'message' => 'string',
-        'attributes' => '\Swagger\Client\Model\ErroOAuthNaoAutorizadoAttributes'
+        'attributes' => '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizadoAttributes'
     ];
 
     /**
@@ -295,7 +295,7 @@ class ErroOAuthNaoAutorizado implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \Swagger\Client\Model\ErroOAuthNaoAutorizadoAttributes
+     * @return \Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizadoAttributes
      */
     public function getAttributes()
     {
@@ -305,7 +305,7 @@ class ErroOAuthNaoAutorizado implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \Swagger\Client\Model\ErroOAuthNaoAutorizadoAttributes $attributes attributes
+     * @param \Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizadoAttributes $attributes attributes
      *
      * @return $this
      */

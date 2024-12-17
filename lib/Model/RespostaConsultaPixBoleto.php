@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * RespostaConsultaPixBoleto Class Doc Comment
@@ -63,8 +63,8 @@ class RespostaConsultaPixBoleto implements ModelInterface, ArrayAccess
         'conta_beneficiario' => 'int',
         'valor_original_titulo_cobranca' => 'float',
         'validade_titulo_cobranca' => 'string',
-        'pix' => '\Swagger\Client\Model\RespostaConsultaPixBoletoPix',
-        'qr_code' => '\Swagger\Client\Model\RespostaConsultaPixBoletoQrCode'
+        'pix' => '\Swagger\Client\Boleto\Model\RespostaConsultaPixBoletoPix',
+        'qr_code' => '\Swagger\Client\Boleto\Model\RespostaConsultaPixBoletoQrCode'
     ];
 
     /**
@@ -391,7 +391,7 @@ class RespostaConsultaPixBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets pix
      *
-     * @return \Swagger\Client\Model\RespostaConsultaPixBoletoPix
+     * @return \Swagger\Client\Boleto\Model\RespostaConsultaPixBoletoPix
      */
     public function getPix()
     {
@@ -401,7 +401,7 @@ class RespostaConsultaPixBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets pix
      *
-     * @param \Swagger\Client\Model\RespostaConsultaPixBoletoPix $pix pix
+     * @param \Swagger\Client\Boleto\Model\RespostaConsultaPixBoletoPix $pix pix
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ class RespostaConsultaPixBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets qr_code
      *
-     * @return \Swagger\Client\Model\RespostaConsultaPixBoletoQrCode
+     * @return \Swagger\Client\Boleto\Model\RespostaConsultaPixBoletoQrCode
      */
     public function getQrCode()
     {
@@ -425,7 +425,7 @@ class RespostaConsultaPixBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets qr_code
      *
-     * @param \Swagger\Client\Model\RespostaConsultaPixBoletoQrCode $qr_code qr_code
+     * @param \Swagger\Client\Boleto\Model\RespostaConsultaPixBoletoQrCode $qr_code qr_code
      *
      * @return $this
      */

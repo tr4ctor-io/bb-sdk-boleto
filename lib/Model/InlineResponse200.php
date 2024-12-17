@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * InlineResponse200 Class Doc Comment
@@ -56,8 +56,8 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pix' => '\Swagger\Client\Model\InlineResponse200Pix',
-        'qr_code' => '\Swagger\Client\Model\InlineResponse200QrCode'
+        'pix' => '\Swagger\Client\Boleto\Model\InlineResponse200Pix',
+        'qr_code' => '\Swagger\Client\Boleto\Model\InlineResponse200QrCode'
     ];
 
     /**
@@ -210,7 +210,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets pix
      *
-     * @return \Swagger\Client\Model\InlineResponse200Pix
+     * @return \Swagger\Client\Boleto\Model\InlineResponse200Pix
      */
     public function getPix()
     {
@@ -220,7 +220,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets pix
      *
-     * @param \Swagger\Client\Model\InlineResponse200Pix $pix pix
+     * @param \Swagger\Client\Boleto\Model\InlineResponse200Pix $pix pix
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Gets qr_code
      *
-     * @return \Swagger\Client\Model\InlineResponse200QrCode
+     * @return \Swagger\Client\Boleto\Model\InlineResponse200QrCode
      */
     public function getQrCode()
     {
@@ -244,7 +244,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     /**
      * Sets qr_code
      *
-     * @param \Swagger\Client\Model\InlineResponse200QrCode $qr_code qr_code
+     * @param \Swagger\Client\Boleto\Model\InlineResponse200QrCode $qr_code qr_code
      *
      * @return $this
      */

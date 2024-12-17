@@ -29,7 +29,7 @@
 namespace Swagger\Client\Model
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * AlteracaoSeuNumero Class Doc Comment

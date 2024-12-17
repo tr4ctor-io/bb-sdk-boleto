@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Boleto\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -94,11 +94,11 @@ class MovimentoApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número identificador do convênio de intercambio de dados em meio eletrônico, pelo qual serão fornecidos os dados dos títulos de um ou mais serviços de cobrança contratados. (required)
-     * @param  \Swagger\Client\Model\IdListarretornomovimentoBody $body body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdListarretornomovimentoBody $body body (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Swagger\Client\Boleto\Model\InlineResponse2001
      */
     public function postConveniosIdListarRetornoMovimento($authorization, $gw_dev_app_key, $id, $body = null)
     {
@@ -114,15 +114,15 @@ class MovimentoApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número identificador do convênio de intercambio de dados em meio eletrônico, pelo qual serão fornecidos os dados dos títulos de um ou mais serviços de cobrança contratados. (required)
-     * @param  \Swagger\Client\Model\IdListarretornomovimentoBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdListarretornomovimentoBody $body (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function postConveniosIdListarRetornoMovimentoWithHttpInfo($authorization, $gw_dev_app_key, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse2001';
         $request = $this->postConveniosIdListarRetornoMovimentoRequest($authorization, $gw_dev_app_key, $id, $body);
 
         try {
@@ -174,7 +174,7 @@ class MovimentoApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2001',
+                        '\Swagger\Client\Boleto\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +182,7 @@ class MovimentoApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class MovimentoApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +198,7 @@ class MovimentoApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class MovimentoApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -224,7 +224,7 @@ class MovimentoApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número identificador do convênio de intercambio de dados em meio eletrônico, pelo qual serão fornecidos os dados dos títulos de um ou mais serviços de cobrança contratados. (required)
-     * @param  \Swagger\Client\Model\IdListarretornomovimentoBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdListarretornomovimentoBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -247,14 +247,14 @@ class MovimentoApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número identificador do convênio de intercambio de dados em meio eletrônico, pelo qual serão fornecidos os dados dos títulos de um ou mais serviços de cobrança contratados. (required)
-     * @param  \Swagger\Client\Model\IdListarretornomovimentoBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdListarretornomovimentoBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postConveniosIdListarRetornoMovimentoAsyncWithHttpInfo($authorization, $gw_dev_app_key, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse2001';
         $request = $this->postConveniosIdListarRetornoMovimentoRequest($authorization, $gw_dev_app_key, $id, $body);
 
         return $this->client
@@ -300,7 +300,7 @@ class MovimentoApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número identificador do convênio de intercambio de dados em meio eletrônico, pelo qual serão fornecidos os dados dos títulos de um ou mais serviços de cobrança contratados. (required)
-     * @param  \Swagger\Client\Model\IdListarretornomovimentoBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdListarretornomovimentoBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

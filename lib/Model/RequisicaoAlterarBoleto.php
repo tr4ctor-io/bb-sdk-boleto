@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * RequisicaoAlterarBoleto Class Doc Comment
@@ -59,37 +59,37 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'numero_convenio' => 'int',
         'indicador_nova_data_vencimento' => 'string',
-        'alteracao_data' => '\Swagger\Client\Model\AlteracaoData',
+        'alteracao_data' => '\Swagger\Client\Boleto\Model\AlteracaoData',
         'indicador_novo_valor_nominal' => 'string',
-        'alteracao_valor' => '\Swagger\Client\Model\AlterarValorNominal',
+        'alteracao_valor' => '\Swagger\Client\Boleto\Model\AlterarValorNominal',
         'indicador_atribuir_desconto' => 'string',
-        'desconto' => '\Swagger\Client\Model\Desconto',
+        'desconto' => '\Swagger\Client\Boleto\Model\Desconto',
         'indicador_alterar_desconto' => 'string',
-        'alteracao_desconto' => '\Swagger\Client\Model\AlteracaoDesconto',
+        'alteracao_desconto' => '\Swagger\Client\Boleto\Model\AlteracaoDesconto',
         'indicador_alterar_data_desconto' => 'string',
-        'alteracao_data_desconto' => '\Swagger\Client\Model\AlteracaoDataDesconto',
+        'alteracao_data_desconto' => '\Swagger\Client\Boleto\Model\AlteracaoDataDesconto',
         'indicador_protestar' => 'string',
-        'protesto' => '\Swagger\Client\Model\Protesto',
+        'protesto' => '\Swagger\Client\Boleto\Model\Protesto',
         'indicador_sustacao_protesto' => 'string',
         'indicador_cancelar_protesto' => 'string',
         'indicador_incluir_abatimento' => 'string',
-        'abatimento' => '\Swagger\Client\Model\Abatimento',
+        'abatimento' => '\Swagger\Client\Boleto\Model\Abatimento',
         'indicador_alterar_abatimento' => 'string',
-        'alteracao_abatimento' => '\Swagger\Client\Model\AlteracaoAbatimento',
+        'alteracao_abatimento' => '\Swagger\Client\Boleto\Model\AlteracaoAbatimento',
         'indicador_cobrar_juros' => 'string',
-        'juros' => '\Swagger\Client\Model\Juros',
+        'juros' => '\Swagger\Client\Boleto\Model\Juros',
         'indicador_dispensar_juros' => 'string',
         'indicador_cobrar_multa' => 'string',
-        'multa' => '\Swagger\Client\Model\Multa',
+        'multa' => '\Swagger\Client\Boleto\Model\Multa',
         'indicador_dispensar_multa' => 'string',
         'indicador_negativar' => 'string',
-        'negativacao' => '\Swagger\Client\Model\Negativacao',
+        'negativacao' => '\Swagger\Client\Boleto\Model\Negativacao',
         'indicador_alterar_seu_numero' => 'string',
-        'alteracao_seu_numero' => '\Swagger\Client\Model\AlteracaoSeuNumero',
+        'alteracao_seu_numero' => '\Swagger\Client\Boleto\Model\AlteracaoSeuNumero',
         'indicador_alterar_endereco_pagador' => 'string',
-        'alteracao_endereco' => '\Swagger\Client\Model\AlteracaoEndereco',
+        'alteracao_endereco' => '\Swagger\Client\Boleto\Model\AlteracaoEndereco',
         'indicador_alterar_prazo_boleto_vencido' => 'string',
-        'alteracao_prazo' => '\Swagger\Client\Model\AlteracaoPrazo'
+        'alteracao_prazo' => '\Swagger\Client\Boleto\Model\AlteracaoPrazo'
     ];
 
     /**
@@ -499,7 +499,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_data
      *
-     * @return \Swagger\Client\Model\AlteracaoData
+     * @return \Swagger\Client\Boleto\Model\AlteracaoData
      */
     public function getAlteracaoData()
     {
@@ -509,7 +509,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_data
      *
-     * @param \Swagger\Client\Model\AlteracaoData $alteracao_data alteracao_data
+     * @param \Swagger\Client\Boleto\Model\AlteracaoData $alteracao_data alteracao_data
      *
      * @return $this
      */
@@ -547,7 +547,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_valor
      *
-     * @return \Swagger\Client\Model\AlterarValorNominal
+     * @return \Swagger\Client\Boleto\Model\AlterarValorNominal
      */
     public function getAlteracaoValor()
     {
@@ -557,7 +557,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_valor
      *
-     * @param \Swagger\Client\Model\AlterarValorNominal $alteracao_valor alteracao_valor
+     * @param \Swagger\Client\Boleto\Model\AlterarValorNominal $alteracao_valor alteracao_valor
      *
      * @return $this
      */
@@ -595,7 +595,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets desconto
      *
-     * @return \Swagger\Client\Model\Desconto
+     * @return \Swagger\Client\Boleto\Model\Desconto
      */
     public function getDesconto()
     {
@@ -605,7 +605,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets desconto
      *
-     * @param \Swagger\Client\Model\Desconto $desconto desconto
+     * @param \Swagger\Client\Boleto\Model\Desconto $desconto desconto
      *
      * @return $this
      */
@@ -643,7 +643,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_desconto
      *
-     * @return \Swagger\Client\Model\AlteracaoDesconto
+     * @return \Swagger\Client\Boleto\Model\AlteracaoDesconto
      */
     public function getAlteracaoDesconto()
     {
@@ -653,7 +653,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_desconto
      *
-     * @param \Swagger\Client\Model\AlteracaoDesconto $alteracao_desconto alteracao_desconto
+     * @param \Swagger\Client\Boleto\Model\AlteracaoDesconto $alteracao_desconto alteracao_desconto
      *
      * @return $this
      */
@@ -691,7 +691,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_data_desconto
      *
-     * @return \Swagger\Client\Model\AlteracaoDataDesconto
+     * @return \Swagger\Client\Boleto\Model\AlteracaoDataDesconto
      */
     public function getAlteracaoDataDesconto()
     {
@@ -701,7 +701,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_data_desconto
      *
-     * @param \Swagger\Client\Model\AlteracaoDataDesconto $alteracao_data_desconto alteracao_data_desconto
+     * @param \Swagger\Client\Boleto\Model\AlteracaoDataDesconto $alteracao_data_desconto alteracao_data_desconto
      *
      * @return $this
      */
@@ -739,7 +739,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets protesto
      *
-     * @return \Swagger\Client\Model\Protesto
+     * @return \Swagger\Client\Boleto\Model\Protesto
      */
     public function getProtesto()
     {
@@ -749,7 +749,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets protesto
      *
-     * @param \Swagger\Client\Model\Protesto $protesto protesto
+     * @param \Swagger\Client\Boleto\Model\Protesto $protesto protesto
      *
      * @return $this
      */
@@ -835,7 +835,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets abatimento
      *
-     * @return \Swagger\Client\Model\Abatimento
+     * @return \Swagger\Client\Boleto\Model\Abatimento
      */
     public function getAbatimento()
     {
@@ -845,7 +845,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets abatimento
      *
-     * @param \Swagger\Client\Model\Abatimento $abatimento abatimento
+     * @param \Swagger\Client\Boleto\Model\Abatimento $abatimento abatimento
      *
      * @return $this
      */
@@ -883,7 +883,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_abatimento
      *
-     * @return \Swagger\Client\Model\AlteracaoAbatimento
+     * @return \Swagger\Client\Boleto\Model\AlteracaoAbatimento
      */
     public function getAlteracaoAbatimento()
     {
@@ -893,7 +893,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_abatimento
      *
-     * @param \Swagger\Client\Model\AlteracaoAbatimento $alteracao_abatimento alteracao_abatimento
+     * @param \Swagger\Client\Boleto\Model\AlteracaoAbatimento $alteracao_abatimento alteracao_abatimento
      *
      * @return $this
      */
@@ -931,7 +931,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets juros
      *
-     * @return \Swagger\Client\Model\Juros
+     * @return \Swagger\Client\Boleto\Model\Juros
      */
     public function getJuros()
     {
@@ -941,7 +941,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets juros
      *
-     * @param \Swagger\Client\Model\Juros $juros juros
+     * @param \Swagger\Client\Boleto\Model\Juros $juros juros
      *
      * @return $this
      */
@@ -1003,7 +1003,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets multa
      *
-     * @return \Swagger\Client\Model\Multa
+     * @return \Swagger\Client\Boleto\Model\Multa
      */
     public function getMulta()
     {
@@ -1013,7 +1013,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets multa
      *
-     * @param \Swagger\Client\Model\Multa $multa multa
+     * @param \Swagger\Client\Boleto\Model\Multa $multa multa
      *
      * @return $this
      */
@@ -1075,7 +1075,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets negativacao
      *
-     * @return \Swagger\Client\Model\Negativacao
+     * @return \Swagger\Client\Boleto\Model\Negativacao
      */
     public function getNegativacao()
     {
@@ -1085,7 +1085,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets negativacao
      *
-     * @param \Swagger\Client\Model\Negativacao $negativacao negativacao
+     * @param \Swagger\Client\Boleto\Model\Negativacao $negativacao negativacao
      *
      * @return $this
      */
@@ -1123,7 +1123,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_seu_numero
      *
-     * @return \Swagger\Client\Model\AlteracaoSeuNumero
+     * @return \Swagger\Client\Boleto\Model\AlteracaoSeuNumero
      */
     public function getAlteracaoSeuNumero()
     {
@@ -1133,7 +1133,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_seu_numero
      *
-     * @param \Swagger\Client\Model\AlteracaoSeuNumero $alteracao_seu_numero alteracao_seu_numero
+     * @param \Swagger\Client\Boleto\Model\AlteracaoSeuNumero $alteracao_seu_numero alteracao_seu_numero
      *
      * @return $this
      */
@@ -1171,7 +1171,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_endereco
      *
-     * @return \Swagger\Client\Model\AlteracaoEndereco
+     * @return \Swagger\Client\Boleto\Model\AlteracaoEndereco
      */
     public function getAlteracaoEndereco()
     {
@@ -1181,7 +1181,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_endereco
      *
-     * @param \Swagger\Client\Model\AlteracaoEndereco $alteracao_endereco alteracao_endereco
+     * @param \Swagger\Client\Boleto\Model\AlteracaoEndereco $alteracao_endereco alteracao_endereco
      *
      * @return $this
      */
@@ -1219,7 +1219,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Gets alteracao_prazo
      *
-     * @return \Swagger\Client\Model\AlteracaoPrazo
+     * @return \Swagger\Client\Boleto\Model\AlteracaoPrazo
      */
     public function getAlteracaoPrazo()
     {
@@ -1229,7 +1229,7 @@ class RequisicaoAlterarBoleto implements ModelInterface, ArrayAccess
     /**
      * Sets alteracao_prazo
      *
-     * @param \Swagger\Client\Model\AlteracaoPrazo $alteracao_prazo alteracao_prazo
+     * @param \Swagger\Client\Boleto\Model\AlteracaoPrazo $alteracao_prazo alteracao_prazo
      *
      * @return $this
      */

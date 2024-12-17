@@ -8,7 +8,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
  * e as credenciais da aplicação, que são obtidas em app.developers.bb.com.br
  * *****************************************************************************************************/
 
- $config = Swagger\Client\Configuration::getDefaultConfiguration();
+ $config = Swagger\Client\Boleto\Configuration::getDefaultConfiguration();
  $config->setAmbienteBB("T"); // em ambiente T usamos gw-dev-app-key nas requisições, em ambiente P, usamos gw-app-key.
 
 //$config->setHost("https://api.hm.bb.com.br/pix/v2"); // HOST BB HMG 1
@@ -53,7 +53,7 @@ $config->setHost("https://api.hm.bb.com.br/cobrancas/v2");
  /*********************************************************************************************
   * Obtendo access token e utilizando no configurador
   * ******************************************************************************************/
- $oauth2Api = new Swagger\Client\ApiBoletoBB\Oauth2Api(new GuzzleHttp\Client(), $config);
+ $oauth2Api = new Swagger\Client\Boleto\Api\Oauth2Api(new GuzzleHttp\Client(), $config);
 
  try {
      $token = $oauth2Api->gerarAccessToken();
@@ -64,17 +64,17 @@ $config->setHost("https://api.hm.bb.com.br/cobrancas/v2");
  }
 
 // Configure OAuth2 access token for authorization: OAuth2
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken($token);
+$config = Swagger\Client\Boleto\Configuration::getDefaultConfiguration()->setAccessToken($token);
 
 $client = new GuzzleHttp\Client();
 
-$apiInstance = new Swagger\Client\ApiBoletoBB\BoletosApi(
+$apiInstance = new Swagger\Client\Boleto\Api\BoletosApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     $client,
     $config
 );
-$body = new \Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletos(
+$body = new \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos(
     [
         'numero_convenio' => '3128557',
         'numero_carteira' => '17',
@@ -95,9 +95,9 @@ $body = new \Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletos(
         'indicador_permissao_recebimento_parcial' => 'N',
         'numero_titulo_beneficiario' => '123456',
         'campo_utilizacao_beneficiario' => 'UM TEXTO',
-        'numero_titulo_cliente' => '00031285570100223516',
+        'numero_titulo_cliente' => '00031285570100223517',
         'mensagem_bloqueto_ocorrencia' => 'Outro texto',
-        'desconto' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosDesconto(
+        'desconto' => new Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosDesconto(
             [
                 'tipo' => '2',
                 'data_expiracao' => '15.12.2024',
@@ -106,20 +106,20 @@ $body = new \Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletos(
         ),
         // 'segundo_desconto' => '',
         // 'terceiro_desconto' => '',
-        'juros_mora' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosJurosMora(
+        'juros_mora' => new Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosJurosMora(
             [
                 'tipo' => '2',
                 'porcentagem' => '1.00'
             ]
         ),
-        'multa' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosMulta(
+        'multa' => new Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosMulta(
             [
                 'tipo' => '2',
                 'data' => '16.12.2024',
                 'porcentagem' => '5.00'
             ]
         ),
-        'pagador' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosPagador(
+        'pagador' => new Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosPagador(
             [
                 "tipo_inscricao" => "1",
                 "numero_inscricao" => "97965940132",
@@ -132,7 +132,7 @@ $body = new \Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletos(
                 "telefone" => "63987654321"
             ]
         ),
-        'beneficiario_final' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosBeneficiarioFinal(
+        'beneficiario_final' => new Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosBeneficiarioFinal(
             [
                 'tipo_inscricao' => '2',
                 'numero_inscricao' => '98959112000179',
@@ -141,7 +141,7 @@ $body = new \Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletos(
         ),
         'indicador_pix' => 'S',
     ]
-); // \Swagger\Client\Model\RequisicaoRegistroBoletos |
+); // '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos |
 $authorization = $token; // string | É um \"token\" de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN]
 $gw_dev_app_key = "2e7b3c854336d5e8acab2772927cfffb"; // string | É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO.
 

@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * RequisicaoRegistroBoletos Class Doc Comment
@@ -78,13 +78,13 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
         'campo_utilizacao_beneficiario' => 'string',
         'numero_titulo_cliente' => 'string',
         'mensagem_bloqueto_ocorrencia' => 'string',
-        'desconto' => '\Swagger\Client\Model\RequisicaoRegistroBoletosDesconto',
-        'segundo_desconto' => '\Swagger\Client\Model\RequisicaoRegistroBoletosSegundoDesconto',
-        'terceiro_desconto' => '\Swagger\Client\Model\RequisicaoRegistroBoletosTerceiroDesconto',
-        'juros_mora' => '\Swagger\Client\Model\RequisicaoRegistroBoletosJurosMora',
-        'multa' => '\Swagger\Client\Model\RequisicaoRegistroBoletosMulta',
-        'pagador' => '\Swagger\Client\Model\RequisicaoRegistroBoletosPagador',
-        'beneficiario_final' => '\Swagger\Client\Model\RequisicaoRegistroBoletosBeneficiarioFinal',
+        'desconto' => '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosDesconto',
+        'segundo_desconto' => '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosSegundoDesconto',
+        'terceiro_desconto' => '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosTerceiroDesconto',
+        'juros_mora' => '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosJurosMora',
+        'multa' => '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosMulta',
+        'pagador' => '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosPagador',
+        'beneficiario_final' => '\Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosBeneficiarioFinal',
         'indicador_pix' => 'string'
     ];
 
@@ -886,7 +886,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets desconto
      *
-     * @return \Swagger\Client\Model\RequisicaoRegistroBoletosDesconto
+     * @return \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosDesconto
      */
     public function getDesconto()
     {
@@ -896,7 +896,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets desconto
      *
-     * @param \Swagger\Client\Model\RequisicaoRegistroBoletosDesconto $desconto desconto
+     * @param \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosDesconto $desconto desconto
      *
      * @return $this
      */
@@ -910,7 +910,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets segundo_desconto
      *
-     * @return \Swagger\Client\Model\RequisicaoRegistroBoletosSegundoDesconto
+     * @return \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosSegundoDesconto
      */
     public function getSegundoDesconto()
     {
@@ -920,7 +920,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets segundo_desconto
      *
-     * @param \Swagger\Client\Model\RequisicaoRegistroBoletosSegundoDesconto $segundo_desconto segundo_desconto
+     * @param \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosSegundoDesconto $segundo_desconto segundo_desconto
      *
      * @return $this
      */
@@ -934,7 +934,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets terceiro_desconto
      *
-     * @return \Swagger\Client\Model\RequisicaoRegistroBoletosTerceiroDesconto
+     * @return \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosTerceiroDesconto
      */
     public function getTerceiroDesconto()
     {
@@ -944,7 +944,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets terceiro_desconto
      *
-     * @param \Swagger\Client\Model\RequisicaoRegistroBoletosTerceiroDesconto $terceiro_desconto terceiro_desconto
+     * @param \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosTerceiroDesconto $terceiro_desconto terceiro_desconto
      *
      * @return $this
      */
@@ -958,7 +958,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets juros_mora
      *
-     * @return \Swagger\Client\Model\RequisicaoRegistroBoletosJurosMora
+     * @return \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosJurosMora
      */
     public function getJurosMora()
     {
@@ -968,7 +968,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets juros_mora
      *
-     * @param \Swagger\Client\Model\RequisicaoRegistroBoletosJurosMora $juros_mora juros_mora
+     * @param \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosJurosMora $juros_mora juros_mora
      *
      * @return $this
      */
@@ -982,7 +982,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets multa
      *
-     * @return \Swagger\Client\Model\RequisicaoRegistroBoletosMulta
+     * @return \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosMulta
      */
     public function getMulta()
     {
@@ -992,7 +992,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets multa
      *
-     * @param \Swagger\Client\Model\RequisicaoRegistroBoletosMulta $multa multa
+     * @param \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosMulta $multa multa
      *
      * @return $this
      */
@@ -1006,7 +1006,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets pagador
      *
-     * @return \Swagger\Client\Model\RequisicaoRegistroBoletosPagador
+     * @return \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosPagador
      */
     public function getPagador()
     {
@@ -1016,7 +1016,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets pagador
      *
-     * @param \Swagger\Client\Model\RequisicaoRegistroBoletosPagador $pagador pagador
+     * @param \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosPagador $pagador pagador
      *
      * @return $this
      */
@@ -1030,7 +1030,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets beneficiario_final
      *
-     * @return \Swagger\Client\Model\RequisicaoRegistroBoletosBeneficiarioFinal
+     * @return \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosBeneficiarioFinal
      */
     public function getBeneficiarioFinal()
     {
@@ -1040,7 +1040,7 @@ class RequisicaoRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets beneficiario_final
      *
-     * @param \Swagger\Client\Model\RequisicaoRegistroBoletosBeneficiarioFinal $beneficiario_final beneficiario_final
+     * @param \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletosBeneficiarioFinal $beneficiario_final beneficiario_final
      *
      * @return $this
      */

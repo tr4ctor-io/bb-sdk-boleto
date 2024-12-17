@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Boleto\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -97,7 +97,7 @@ class ConvnioApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \Swagger\Client\Boleto\Model\InlineResponse2002
      */
     public function ativarConsultaBaixaOperacional($id, $authorization, $gw_dev_app_key)
     {
@@ -116,11 +116,11 @@ class ConvnioApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function ativarConsultaBaixaOperacionalWithHttpInfo($id, $authorization, $gw_dev_app_key)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse2002';
         $request = $this->ativarConsultaBaixaOperacionalRequest($id, $authorization, $gw_dev_app_key);
 
         try {
@@ -172,7 +172,7 @@ class ConvnioApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2002',
+                        '\Swagger\Client\Boleto\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -180,7 +180,7 @@ class ConvnioApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -188,7 +188,7 @@ class ConvnioApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -196,7 +196,7 @@ class ConvnioApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -204,7 +204,7 @@ class ConvnioApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class ConvnioApi
      */
     public function ativarConsultaBaixaOperacionalAsyncWithHttpInfo($id, $authorization, $gw_dev_app_key)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse2002';
         $request = $this->ativarConsultaBaixaOperacionalRequest($id, $authorization, $gw_dev_app_key);
 
         return $this->client
@@ -425,7 +425,7 @@ class ConvnioApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \Swagger\Client\Boleto\Model\InlineResponse2002
      */
     public function desativaConsultaBaixaOperacional($id, $authorization, $gw_dev_app_key)
     {
@@ -444,11 +444,11 @@ class ConvnioApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function desativaConsultaBaixaOperacionalWithHttpInfo($id, $authorization, $gw_dev_app_key)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse2002';
         $request = $this->desativaConsultaBaixaOperacionalRequest($id, $authorization, $gw_dev_app_key);
 
         try {
@@ -500,7 +500,7 @@ class ConvnioApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2002',
+                        '\Swagger\Client\Boleto\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -508,7 +508,7 @@ class ConvnioApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -516,7 +516,7 @@ class ConvnioApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -524,7 +524,7 @@ class ConvnioApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -532,7 +532,7 @@ class ConvnioApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -578,7 +578,7 @@ class ConvnioApi
      */
     public function desativaConsultaBaixaOperacionalAsyncWithHttpInfo($id, $authorization, $gw_dev_app_key)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse2002';
         $request = $this->desativaConsultaBaixaOperacionalRequest($id, $authorization, $gw_dev_app_key);
 
         return $this->client

@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Boleto\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -91,14 +91,14 @@ class BoletosApi
      *
      * Altera um boleto bancário
      *
-     * @param  \Swagger\Client\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.    Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do título de cobrança. (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RespostaAlterarBoleto
+     * @return \Swagger\Client\Boleto\Model\RespostaAlterarBoleto
      */
     public function alteraBoletoBancarioId($body, $authorization, $gw_dev_app_key, $id)
     {
@@ -111,18 +111,18 @@ class BoletosApi
      *
      * Altera um boleto bancário
      *
-     * @param  \Swagger\Client\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.    Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do título de cobrança. (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RespostaAlterarBoleto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\RespostaAlterarBoleto, HTTP status code, HTTP response headers (array of strings)
      */
     public function alteraBoletoBancarioIdWithHttpInfo($body, $authorization, $gw_dev_app_key, $id)
     {
-        $returnType = '\Swagger\Client\Model\RespostaAlterarBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaAlterarBoleto';
         $request = $this->alteraBoletoBancarioIdRequest($body, $authorization, $gw_dev_app_key, $id);
 
         try {
@@ -174,7 +174,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RespostaAlterarBoleto',
+                        '\Swagger\Client\Boleto\Model\RespostaAlterarBoleto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +182,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +198,7 @@ class BoletosApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -221,7 +221,7 @@ class BoletosApi
      *
      * Altera um boleto bancário
      *
-     * @param  \Swagger\Client\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.    Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do título de cobrança. (required)
@@ -244,7 +244,7 @@ class BoletosApi
      *
      * Altera um boleto bancário
      *
-     * @param  \Swagger\Client\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.    Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do título de cobrança. (required)
@@ -254,7 +254,7 @@ class BoletosApi
      */
     public function alteraBoletoBancarioIdAsyncWithHttpInfo($body, $authorization, $gw_dev_app_key, $id)
     {
-        $returnType = '\Swagger\Client\Model\RespostaAlterarBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaAlterarBoleto';
         $request = $this->alteraBoletoBancarioIdRequest($body, $authorization, $gw_dev_app_key, $id);
 
         return $this->client
@@ -297,7 +297,7 @@ class BoletosApi
     /**
      * Create request for operation 'alteraBoletoBancarioId'
      *
-     * @param  \Swagger\Client\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoAlterarBoleto $body Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários. (required)
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.    Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do título de cobrança. (required)
@@ -453,7 +453,7 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RespostaBoletosBaixaOperacional
+     * @return \Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacional
      */
     public function boletosBaixaOperacional($gw_dev_app_key, $authorization, $agencia, $conta, $carteira, $variacao, $data_inicio_agendamento_titulo, $data_fim_agendamento_titulo, $estado_baixa_operacional = null, $modalidade_titulo = null, $data_inicio_vencimento_titulo = null, $data_fim_vencimento_titulo = null, $data_inicio_registro_titulo = null, $data_fim_registro_titulo = null, $horario_inicio_agendamento_titulo = null, $horario_fim_agendamento_titulo = null, $id_proximo_titulo = null)
     {
@@ -486,11 +486,11 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RespostaBoletosBaixaOperacional, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacional, HTTP status code, HTTP response headers (array of strings)
      */
     public function boletosBaixaOperacionalWithHttpInfo($gw_dev_app_key, $authorization, $agencia, $conta, $carteira, $variacao, $data_inicio_agendamento_titulo, $data_fim_agendamento_titulo, $estado_baixa_operacional = null, $modalidade_titulo = null, $data_inicio_vencimento_titulo = null, $data_fim_vencimento_titulo = null, $data_inicio_registro_titulo = null, $data_fim_registro_titulo = null, $horario_inicio_agendamento_titulo = null, $horario_fim_agendamento_titulo = null, $id_proximo_titulo = null)
     {
-        $returnType = '\Swagger\Client\Model\RespostaBoletosBaixaOperacional';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacional';
         $request = $this->boletosBaixaOperacionalRequest($gw_dev_app_key, $authorization, $agencia, $conta, $carteira, $variacao, $data_inicio_agendamento_titulo, $data_fim_agendamento_titulo, $estado_baixa_operacional, $modalidade_titulo, $data_inicio_vencimento_titulo, $data_fim_vencimento_titulo, $data_inicio_registro_titulo, $data_fim_registro_titulo, $horario_inicio_agendamento_titulo, $horario_fim_agendamento_titulo, $id_proximo_titulo);
 
         try {
@@ -542,7 +542,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RespostaBoletosBaixaOperacional',
+                        '\Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacional',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -558,7 +558,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -566,7 +566,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -640,7 +640,7 @@ class BoletosApi
      */
     public function boletosBaixaOperacionalAsyncWithHttpInfo($gw_dev_app_key, $authorization, $agencia, $conta, $carteira, $variacao, $data_inicio_agendamento_titulo, $data_fim_agendamento_titulo, $estado_baixa_operacional = null, $modalidade_titulo = null, $data_inicio_vencimento_titulo = null, $data_fim_vencimento_titulo = null, $data_inicio_registro_titulo = null, $data_fim_registro_titulo = null, $horario_inicio_agendamento_titulo = null, $horario_fim_agendamento_titulo = null, $id_proximo_titulo = null)
     {
-        $returnType = '\Swagger\Client\Model\RespostaBoletosBaixaOperacional';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacional';
         $request = $this->boletosBaixaOperacionalRequest($gw_dev_app_key, $authorization, $agencia, $conta, $carteira, $variacao, $data_inicio_agendamento_titulo, $data_fim_agendamento_titulo, $estado_baixa_operacional, $modalidade_titulo, $data_inicio_vencimento_titulo, $data_fim_vencimento_titulo, $data_inicio_registro_titulo, $data_fim_registro_titulo, $horario_inicio_agendamento_titulo, $horario_fim_agendamento_titulo, $id_proximo_titulo);
 
         return $this->client
@@ -908,11 +908,11 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdCancelarpixBody $body body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdCancelarpixBody $body body (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Swagger\Client\Boleto\Model\InlineResponse200
      */
     public function cancelarPixBoletoId($authorization, $gw_dev_app_key, $id, $body = null)
     {
@@ -928,15 +928,15 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdCancelarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdCancelarpixBody $body (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelarPixBoletoIdWithHttpInfo($authorization, $gw_dev_app_key, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse200';
         $request = $this->cancelarPixBoletoIdRequest($authorization, $gw_dev_app_key, $id, $body);
 
         try {
@@ -988,7 +988,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\Swagger\Client\Boleto\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1004,7 +1004,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1012,7 +1012,7 @@ class BoletosApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1020,7 +1020,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1038,7 +1038,7 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdCancelarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdCancelarpixBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1061,14 +1061,14 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdCancelarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdCancelarpixBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function cancelarPixBoletoIdAsyncWithHttpInfo($authorization, $gw_dev_app_key, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse200';
         $request = $this->cancelarPixBoletoIdRequest($authorization, $gw_dev_app_key, $id, $body);
 
         return $this->client
@@ -1114,7 +1114,7 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdCancelarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdCancelarpixBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1248,7 +1248,7 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RespostaConsultaPixBoleto
+     * @return \Swagger\Client\Boleto\Model\RespostaConsultaPixBoleto
      */
     public function consultarPixBoletoId($id, $gw_dev_app_key, $authorization, $numero_convenio)
     {
@@ -1268,11 +1268,11 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RespostaConsultaPixBoleto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\RespostaConsultaPixBoleto, HTTP status code, HTTP response headers (array of strings)
      */
     public function consultarPixBoletoIdWithHttpInfo($id, $gw_dev_app_key, $authorization, $numero_convenio)
     {
-        $returnType = '\Swagger\Client\Model\RespostaConsultaPixBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaConsultaPixBoleto';
         $request = $this->consultarPixBoletoIdRequest($id, $gw_dev_app_key, $authorization, $numero_convenio);
 
         try {
@@ -1324,7 +1324,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RespostaConsultaPixBoleto',
+                        '\Swagger\Client\Boleto\Model\RespostaConsultaPixBoleto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1332,7 +1332,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1340,7 +1340,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1348,7 +1348,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1396,7 +1396,7 @@ class BoletosApi
      */
     public function consultarPixBoletoIdAsyncWithHttpInfo($id, $gw_dev_app_key, $authorization, $numero_convenio)
     {
-        $returnType = '\Swagger\Client\Model\RespostaConsultaPixBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaConsultaPixBoleto';
         $request = $this->consultarPixBoletoIdRequest($id, $gw_dev_app_key, $authorization, $numero_convenio);
 
         return $this->client
@@ -1583,7 +1583,7 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RespostaDetalhamentoBoleto
+     * @return \Swagger\Client\Boleto\Model\RespostaDetalhamentoBoleto
      */
     public function detalhaBoletoBancarioId($id, $gw_dev_app_key, $authorization, $numero_convenio)
     {
@@ -1603,11 +1603,11 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RespostaDetalhamentoBoleto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\RespostaDetalhamentoBoleto, HTTP status code, HTTP response headers (array of strings)
      */
     public function detalhaBoletoBancarioIdWithHttpInfo($id, $gw_dev_app_key, $authorization, $numero_convenio)
     {
-        $returnType = '\Swagger\Client\Model\RespostaDetalhamentoBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaDetalhamentoBoleto';
         $request = $this->detalhaBoletoBancarioIdRequest($id, $gw_dev_app_key, $authorization, $numero_convenio);
 
         try {
@@ -1659,7 +1659,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RespostaDetalhamentoBoleto',
+                        '\Swagger\Client\Boleto\Model\RespostaDetalhamentoBoleto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1667,7 +1667,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1675,7 +1675,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1683,7 +1683,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1731,7 +1731,7 @@ class BoletosApi
      */
     public function detalhaBoletoBancarioIdAsyncWithHttpInfo($id, $gw_dev_app_key, $authorization, $numero_convenio)
     {
-        $returnType = '\Swagger\Client\Model\RespostaDetalhamentoBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaDetalhamentoBoleto';
         $request = $this->detalhaBoletoBancarioIdRequest($id, $gw_dev_app_key, $authorization, $numero_convenio);
 
         return $this->client
@@ -1914,11 +1914,11 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdGerarpixBody $body body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdGerarpixBody $body body (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Swagger\Client\Boleto\Model\InlineResponse200
      */
     public function gerarPixBoletoId($authorization, $gw_dev_app_key, $id, $body = null)
     {
@@ -1934,15 +1934,15 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdGerarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdGerarpixBody $body (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function gerarPixBoletoIdWithHttpInfo($authorization, $gw_dev_app_key, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse200';
         $request = $this->gerarPixBoletoIdRequest($authorization, $gw_dev_app_key, $id, $body);
 
         try {
@@ -1994,7 +1994,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\Swagger\Client\Boleto\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2002,7 +2002,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2010,7 +2010,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2018,7 +2018,7 @@ class BoletosApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2026,7 +2026,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2044,7 +2044,7 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdGerarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdGerarpixBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2067,14 +2067,14 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdGerarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdGerarpixBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function gerarPixBoletoIdAsyncWithHttpInfo($authorization, $gw_dev_app_key, $id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Swagger\Client\Boleto\Model\InlineResponse200';
         $request = $this->gerarPixBoletoIdRequest($authorization, $gw_dev_app_key, $id, $body);
 
         return $this->client
@@ -2120,7 +2120,7 @@ class BoletosApi
      * @param  string $authorization É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório. (required)
-     * @param  \Swagger\Client\Model\IdGerarpixBody $body (optional)
+     * @param  \Swagger\Client\Boleto\Model\IdGerarpixBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2247,13 +2247,13 @@ class BoletosApi
      *
      * Registra Boleto de Cobrança
      *
-     * @param  \Swagger\Client\Model\RequisicaoRegistroBoletos $body body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos $body body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RespostaRegistroBoletos
+     * @return \Swagger\Client\Boleto\Model\RespostaRegistroBoletos
      */
     public function incluiBoletoBancarioId($body, $authorization, $gw_dev_app_key)
     {
@@ -2266,17 +2266,17 @@ class BoletosApi
      *
      * Registra Boleto de Cobrança
      *
-     * @param  \Swagger\Client\Model\RequisicaoRegistroBoletos $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RespostaRegistroBoletos, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\RespostaRegistroBoletos, HTTP status code, HTTP response headers (array of strings)
      */
     public function incluiBoletoBancarioIdWithHttpInfo($body, $authorization, $gw_dev_app_key)
     {
-        $returnType = '\Swagger\Client\Model\RespostaRegistroBoletos';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaRegistroBoletos';
         $request = $this->incluiBoletoBancarioIdRequest($body, $authorization, $gw_dev_app_key);
 
         try {
@@ -2328,7 +2328,7 @@ class BoletosApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RespostaRegistroBoletos',
+                        '\Swagger\Client\Boleto\Model\RespostaRegistroBoletos',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2336,7 +2336,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2344,7 +2344,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2352,7 +2352,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2360,7 +2360,7 @@ class BoletosApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV4',
+                        '\Swagger\Client\Boleto\Model\ErroV4',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2375,7 +2375,7 @@ class BoletosApi
      *
      * Registra Boleto de Cobrança
      *
-     * @param  \Swagger\Client\Model\RequisicaoRegistroBoletos $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      *
@@ -2397,7 +2397,7 @@ class BoletosApi
      *
      * Registra Boleto de Cobrança
      *
-     * @param  \Swagger\Client\Model\RequisicaoRegistroBoletos $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      *
@@ -2406,7 +2406,7 @@ class BoletosApi
      */
     public function incluiBoletoBancarioIdAsyncWithHttpInfo($body, $authorization, $gw_dev_app_key)
     {
-        $returnType = '\Swagger\Client\Model\RespostaRegistroBoletos';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaRegistroBoletos';
         $request = $this->incluiBoletoBancarioIdRequest($body, $authorization, $gw_dev_app_key);
 
         return $this->client
@@ -2449,7 +2449,7 @@ class BoletosApi
     /**
      * Create request for operation 'incluiBoletoBancarioId'
      *
-     * @param  \Swagger\Client\Model\RequisicaoRegistroBoletos $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      *
@@ -2595,7 +2595,7 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RespostaListaBoletos[]
+     * @return \Swagger\Client\Boleto\Model\RespostaListaBoletos[]
      */
     public function listaBoletosId($gw_dev_app_key, $authorization, $indicador_situacao, $agencia_beneficiario, $conta_beneficiario, $conta_caucao = null, $carteira_convenio = null, $variacao_carteira_convenio = null, $modalidade_cobranca = null, $cnpj_pagador = null, $digito_cnpj_pagador = null, $cpf_pagador = null, $digito_cpf_pagador = null, $data_inicio_vencimento = null, $data_fim_vencimento = null, $data_inicio_registro = null, $data_fim_registro = null, $data_inicio_movimento = null, $data_fim_movimento = null, $codigo_estado_titulo_cobranca = null, $boleto_vencido = null, $indice = null)
     {
@@ -2633,11 +2633,11 @@ class BoletosApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RespostaListaBoletos[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\RespostaListaBoletos[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listaBoletosIdWithHttpInfo($gw_dev_app_key, $authorization, $indicador_situacao, $agencia_beneficiario, $conta_beneficiario, $conta_caucao = null, $carteira_convenio = null, $variacao_carteira_convenio = null, $modalidade_cobranca = null, $cnpj_pagador = null, $digito_cnpj_pagador = null, $cpf_pagador = null, $digito_cpf_pagador = null, $data_inicio_vencimento = null, $data_fim_vencimento = null, $data_inicio_registro = null, $data_fim_registro = null, $data_inicio_movimento = null, $data_fim_movimento = null, $codigo_estado_titulo_cobranca = null, $boleto_vencido = null, $indice = null)
     {
-        $returnType = '\Swagger\Client\Model\RespostaListaBoletos[]';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaListaBoletos[]';
         $request = $this->listaBoletosIdRequest($gw_dev_app_key, $authorization, $indicador_situacao, $agencia_beneficiario, $conta_beneficiario, $conta_caucao, $carteira_convenio, $variacao_carteira_convenio, $modalidade_cobranca, $cnpj_pagador, $digito_cnpj_pagador, $cpf_pagador, $digito_cpf_pagador, $data_inicio_vencimento, $data_fim_vencimento, $data_inicio_registro, $data_fim_registro, $data_inicio_movimento, $data_fim_movimento, $codigo_estado_titulo_cobranca, $boleto_vencido, $indice);
 
         try {
@@ -2689,7 +2689,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RespostaListaBoletos[]',
+                        '\Swagger\Client\Boleto\Model\RespostaListaBoletos[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2697,7 +2697,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV2',
+                        '\Swagger\Client\Boleto\Model\ErroV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2705,7 +2705,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2721,7 +2721,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV2',
+                        '\Swagger\Client\Boleto\Model\ErroV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2729,7 +2729,7 @@ class BoletosApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroV2',
+                        '\Swagger\Client\Boleto\Model\ErroV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2813,7 +2813,7 @@ class BoletosApi
      */
     public function listaBoletosIdAsyncWithHttpInfo($gw_dev_app_key, $authorization, $indicador_situacao, $agencia_beneficiario, $conta_beneficiario, $conta_caucao = null, $carteira_convenio = null, $variacao_carteira_convenio = null, $modalidade_cobranca = null, $cnpj_pagador = null, $digito_cnpj_pagador = null, $cpf_pagador = null, $digito_cpf_pagador = null, $data_inicio_vencimento = null, $data_fim_vencimento = null, $data_inicio_registro = null, $data_fim_registro = null, $data_inicio_movimento = null, $data_fim_movimento = null, $codigo_estado_titulo_cobranca = null, $boleto_vencido = null, $indice = null)
     {
-        $returnType = '\Swagger\Client\Model\RespostaListaBoletos[]';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaListaBoletos[]';
         $request = $this->listaBoletosIdRequest($gw_dev_app_key, $authorization, $indicador_situacao, $agencia_beneficiario, $conta_beneficiario, $conta_caucao, $carteira_convenio, $variacao_carteira_convenio, $modalidade_cobranca, $cnpj_pagador, $digito_cnpj_pagador, $cpf_pagador, $digito_cpf_pagador, $data_inicio_vencimento, $data_fim_vencimento, $data_inicio_registro, $data_fim_registro, $data_inicio_movimento, $data_fim_movimento, $codigo_estado_titulo_cobranca, $boleto_vencido, $indice);
 
         return $this->client
@@ -3085,14 +3085,14 @@ class BoletosApi
      *
      * Permitir a baixa/cancelamento de um  título de cobrança.
      *
-     * @param  \Swagger\Client\Model\RequisicaoBaixaBoleto $body body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoBaixaBoleto $body body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do boleto bancário (único e exclusivo) que identifica o título e é usado para pagá-lo. (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RespostaBaixaBoleto
+     * @return \Swagger\Client\Boleto\Model\RespostaBaixaBoleto
      */
     public function permitirBaixaCancelamentoId($body, $authorization, $gw_dev_app_key, $id)
     {
@@ -3105,18 +3105,18 @@ class BoletosApi
      *
      * Permitir a baixa/cancelamento de um  título de cobrança.
      *
-     * @param  \Swagger\Client\Model\RequisicaoBaixaBoleto $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoBaixaBoleto $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do boleto bancário (único e exclusivo) que identifica o título e é usado para pagá-lo. (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RespostaBaixaBoleto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Boleto\Model\RespostaBaixaBoleto, HTTP status code, HTTP response headers (array of strings)
      */
     public function permitirBaixaCancelamentoIdWithHttpInfo($body, $authorization, $gw_dev_app_key, $id)
     {
-        $returnType = '\Swagger\Client\Model\RespostaBaixaBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaBaixaBoleto';
         $request = $this->permitirBaixaCancelamentoIdRequest($body, $authorization, $gw_dev_app_key, $id);
 
         try {
@@ -3168,7 +3168,7 @@ class BoletosApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RespostaBaixaBoleto',
+                        '\Swagger\Client\Boleto\Model\RespostaBaixaBoleto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3176,7 +3176,7 @@ class BoletosApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3184,7 +3184,7 @@ class BoletosApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ErroOAuthNaoAutorizado',
+                        '\Swagger\Client\Boleto\Model\ErroOAuthNaoAutorizado',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3192,7 +3192,7 @@ class BoletosApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3200,7 +3200,7 @@ class BoletosApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Erro',
+                        '\Swagger\Client\Boleto\Model\Erro',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3215,7 +3215,7 @@ class BoletosApi
      *
      * Permitir a baixa/cancelamento de um  título de cobrança.
      *
-     * @param  \Swagger\Client\Model\RequisicaoBaixaBoleto $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoBaixaBoleto $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do boleto bancário (único e exclusivo) que identifica o título e é usado para pagá-lo. (required)
@@ -3238,7 +3238,7 @@ class BoletosApi
      *
      * Permitir a baixa/cancelamento de um  título de cobrança.
      *
-     * @param  \Swagger\Client\Model\RequisicaoBaixaBoleto $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoBaixaBoleto $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do boleto bancário (único e exclusivo) que identifica o título e é usado para pagá-lo. (required)
@@ -3248,7 +3248,7 @@ class BoletosApi
      */
     public function permitirBaixaCancelamentoIdAsyncWithHttpInfo($body, $authorization, $gw_dev_app_key, $id)
     {
-        $returnType = '\Swagger\Client\Model\RespostaBaixaBoleto';
+        $returnType = '\Swagger\Client\Boleto\Model\RespostaBaixaBoleto';
         $request = $this->permitirBaixaCancelamentoIdRequest($body, $authorization, $gw_dev_app_key, $id);
 
         return $this->client
@@ -3291,7 +3291,7 @@ class BoletosApi
     /**
      * Create request for operation 'permitirBaixaCancelamentoId'
      *
-     * @param  \Swagger\Client\Model\RequisicaoBaixaBoleto $body (required)
+     * @param  \Swagger\Client\Boleto\Model\RequisicaoBaixaBoleto $body (required)
      * @param  string $authorization É um \&quot;token\&quot; de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN] (required)
      * @param  string $gw_dev_app_key É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO. (required)
      * @param  string $id Número do boleto bancário (único e exclusivo) que identifica o título e é usado para pagá-lo. (required)

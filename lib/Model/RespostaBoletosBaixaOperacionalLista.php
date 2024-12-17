@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * RespostaBoletosBaixaOperacionalLista Class Doc Comment
@@ -60,7 +60,7 @@ class RespostaBoletosBaixaOperacionalLista implements ModelInterface, ArrayAcces
         'carteira' => 'int',
         'variacao' => 'int',
         'convenio' => 'int',
-        'titulo' => '\Swagger\Client\Model\RespostaBoletosBaixaOperacionalTitulo'
+        'titulo' => '\Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacionalTitulo'
     ];
 
     /**
@@ -295,7 +295,7 @@ class RespostaBoletosBaixaOperacionalLista implements ModelInterface, ArrayAcces
     /**
      * Gets titulo
      *
-     * @return \Swagger\Client\Model\RespostaBoletosBaixaOperacionalTitulo
+     * @return \Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacionalTitulo
      */
     public function getTitulo()
     {
@@ -305,7 +305,7 @@ class RespostaBoletosBaixaOperacionalLista implements ModelInterface, ArrayAcces
     /**
      * Sets titulo
      *
-     * @param \Swagger\Client\Model\RespostaBoletosBaixaOperacionalTitulo $titulo titulo
+     * @param \Swagger\Client\Boleto\Model\RespostaBoletosBaixaOperacionalTitulo $titulo titulo
      *
      * @return $this
      */

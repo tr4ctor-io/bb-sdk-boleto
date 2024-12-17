@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * ErroV4 Class Doc Comment
@@ -57,7 +57,7 @@ class ErroV4 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'erros' => '\Swagger\Client\Model\Errov4Erros[]'
+        'erros' => '\Swagger\Client\Boleto\Model\Errov4Erros[]'
     ];
 
     /**
@@ -205,7 +205,7 @@ class ErroV4 implements ModelInterface, ArrayAccess
     /**
      * Gets erros
      *
-     * @return \Swagger\Client\Model\Errov4Erros[]
+     * @return \Swagger\Client\Boleto\Model\Errov4Erros[]
      */
     public function getErros()
     {
@@ -215,7 +215,7 @@ class ErroV4 implements ModelInterface, ArrayAccess
     /**
      * Sets erros
      *
-     * @param \Swagger\Client\Model\Errov4Erros[] $erros Lista que contém os objetos de erro.
+     * @param \Swagger\Client\Boleto\Model\Errov4Erros[] $erros Lista que contém os objetos de erro.
      *
      * @return $this
      */

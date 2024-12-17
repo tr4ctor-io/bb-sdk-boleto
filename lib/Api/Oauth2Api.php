@@ -4,7 +4,7 @@
  * Geração de AcessToken via OAuth2 - BB Developers
  *
  */
-namespace Swagger\Client\Api;
+namespace Swagger\Client\Boleto\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * RespostaRegistroBoletos Class Doc Comment
@@ -64,8 +64,8 @@ class RespostaRegistroBoletos implements ModelInterface, ArrayAccess
         'linha_digitavel' => 'string',
         'codigo_barra_numerico' => 'string',
         'numero_contrato_cobranca' => 'float',
-        'beneficiario' => '\Swagger\Client\Model\RespostaRegistroBoletosBeneficiario',
-        'qr_code' => '\Swagger\Client\Model\RespostaRegistroBoletosQrCode',
+        'beneficiario' => '\Swagger\Client\Boleto\Model\RespostaRegistroBoletosBeneficiario',
+        'qr_code' => '\Swagger\Client\Boleto\Model\RespostaRegistroBoletosQrCode',
         'observacao' => 'string'
     ];
 
@@ -427,7 +427,7 @@ class RespostaRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets beneficiario
      *
-     * @return \Swagger\Client\Model\RespostaRegistroBoletosBeneficiario
+     * @return \Swagger\Client\Boleto\Model\RespostaRegistroBoletosBeneficiario
      */
     public function getBeneficiario()
     {
@@ -437,7 +437,7 @@ class RespostaRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets beneficiario
      *
-     * @param \Swagger\Client\Model\RespostaRegistroBoletosBeneficiario $beneficiario beneficiario
+     * @param \Swagger\Client\Boleto\Model\RespostaRegistroBoletosBeneficiario $beneficiario beneficiario
      *
      * @return $this
      */
@@ -451,7 +451,7 @@ class RespostaRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Gets qr_code
      *
-     * @return \Swagger\Client\Model\RespostaRegistroBoletosQrCode
+     * @return \Swagger\Client\Boleto\Model\RespostaRegistroBoletosQrCode
      */
     public function getQrCode()
     {
@@ -461,7 +461,7 @@ class RespostaRegistroBoletos implements ModelInterface, ArrayAccess
     /**
      * Sets qr_code
      *
-     * @param \Swagger\Client\Model\RespostaRegistroBoletosQrCode $qr_code qr_code
+     * @param \Swagger\Client\Boleto\Model\RespostaRegistroBoletosQrCode $qr_code qr_code
      *
      * @return $this
      */

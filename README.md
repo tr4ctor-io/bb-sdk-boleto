@@ -66,7 +66,7 @@ $apiInstance = new Swagger\Client\Api\BoletosApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\RequisicaoAlterarBoleto(); // \Swagger\Client\Model\RequisicaoAlterarBoleto | Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários.
+$body = new \Swagger\Client\Boleto\Model\RequisicaoAlterarBoleto(); // \Swagger\Client\Boleto\Model\RequisicaoAlterarBoleto | Representação dos campos de requisição de uma solicitação de alteração dos dados de boletos bancários.
 $authorization = "authorization_example"; // string | É um “token” de acesso fornecido pelo OAuth 2.0.    Example: Bearer [ACCESS_TOKEN]
 $gw_dev_app_key = "gw_dev_app_key_example"; // string | É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO.
 $id = "id_example"; // string | Número do título de cobrança.
@@ -124,7 +124,7 @@ $apiInstance = new Swagger\Client\Api\BoletosApi(
 $authorization = "authorization_example"; // string | É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN]
 $gw_dev_app_key = "gw_dev_app_key_example"; // string | É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO.
 $id = "id_example"; // string | Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório.
-$body = new \Swagger\Client\Model\IdCancelarpixBody(); // \Swagger\Client\Model\IdCancelarpixBody | 
+$body = new \Swagger\Client\Boleto\Model\IdCancelarpixBody(); // \Swagger\Client\Boleto\Model\IdCancelarpixBody |
 
 try {
     $result = $apiInstance->cancelarPixBoletoId($authorization, $gw_dev_app_key, $id, $body);
@@ -187,7 +187,7 @@ $apiInstance = new Swagger\Client\Api\BoletosApi(
 $authorization = "authorization_example"; // string | É um “token” de acesso fornecido pelo OAuth 2.0.Example: Bearer [ACCESS_TOKEN]
 $gw_dev_app_key = "gw_dev_app_key_example"; // string | É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.Para os testes em ambiente de homologação, trocar por gw-app-key. Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO.
 $id = "id_example"; // string | Número de identificação do boleto (correspondente ao NOSSO NÚMERO, numeroTituloCliente), no formato STRING, com 20 dígitos, que deverá ser formatado da seguinte forma: “000” + (número do convênio com 7 dígitos) + (10 algarismos - se necessário, completar com zeros à esquerda). Campo Obrigatório.
-$body = new \Swagger\Client\Model\IdGerarpixBody(); // \Swagger\Client\Model\IdGerarpixBody | 
+$body = new \Swagger\Client\Boleto\Model\IdGerarpixBody(); // \Swagger\Client\Boleto\Model\IdGerarpixBody |
 
 try {
     $result = $apiInstance->gerarPixBoletoId($authorization, $gw_dev_app_key, $id, $body);
@@ -205,7 +205,7 @@ $apiInstance = new Swagger\Client\Api\BoletosApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\RequisicaoRegistroBoletos(); // \Swagger\Client\Model\RequisicaoRegistroBoletos | 
+$body = new \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos(); // \Swagger\Client\Boleto\Model\RequisicaoRegistroBoletos |
 $authorization = "authorization_example"; // string | É um \"token\" de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN]
 $gw_dev_app_key = "gw_dev_app_key_example"; // string | É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO.
 
@@ -264,7 +264,7 @@ $apiInstance = new Swagger\Client\Api\BoletosApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\RequisicaoBaixaBoleto(); // \Swagger\Client\Model\RequisicaoBaixaBoleto | 
+$body = new \Swagger\Client\Boleto\Model\RequisicaoBaixaBoleto(); // \Swagger\Client\Boleto\Model\RequisicaoBaixaBoleto |
 $authorization = "authorization_example"; // string | É um \"token\" de acesso fornecido pelo OAuth 2.0. Ex: Bearer [ACCESS_TOKEN]
 $gw_dev_app_key = "gw_dev_app_key_example"; // string | É a chave de acesso do aplicativo do desenvolvedor utilizada em produção, obtida no Portal do Desenvolvedor. Essa chave será usada para identificação do aplicativo.  Para os testes em ambiente de homologação, trocar por gw-app-key.  Ex: 0021239456d80136bebf005056891bed. CAMPO OBRIGATÓRIO.
 $id = "id_example"; // string | Número do boleto bancário (único e exclusivo) que identifica o título e é usado para pagá-lo.
@@ -363,13 +363,10 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: application
-- **Authorization URL**: 
-- **Scopes**: 
+- **Authorization URL**:
+- **Scopes**:
  - **cobrancas.boletos-requisicao**: Permite registrar e baixar boletos de cobrança.
  - **cobrancas.boletos-info**: Permite consultar detalhes de boletos de cobrança.
 
 
 ## Author
-
-
-

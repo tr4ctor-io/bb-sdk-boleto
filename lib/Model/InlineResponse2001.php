@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Swagger\Client\Boleto\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Swagger\Client\Boleto\ObjectSerializer;
 
 /**
  * InlineResponse2001 Class Doc Comment
@@ -58,7 +58,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'indicador_continuidade' => 'string',
         'numero_ultimo_registro' => 'int',
-        'lista_registro' => '\Swagger\Client\Model\InlineResponse2001ListaRegistro[]'
+        'lista_registro' => '\Swagger\Client\Boleto\Model\InlineResponse2001ListaRegistro[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
     /**
      * Gets lista_registro
      *
-     * @return \Swagger\Client\Model\InlineResponse2001ListaRegistro[]
+     * @return \Swagger\Client\Boleto\Model\InlineResponse2001ListaRegistro[]
      */
     public function getListaRegistro()
     {
@@ -305,7 +305,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
     /**
      * Sets lista_registro
      *
-     * @param \Swagger\Client\Model\InlineResponse2001ListaRegistro[] $lista_registro lista_registro
+     * @param \Swagger\Client\Boleto\Model\InlineResponse2001ListaRegistro[] $lista_registro lista_registro
      *
      * @return $this
      */
