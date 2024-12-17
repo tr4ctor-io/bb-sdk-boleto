@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **linha_digitavel** | **string** | Linha digitável do boleto. | [optional] 
 **codigo_barra_numerico** | **string** | Define o código de barras numérico do boleto. | [optional] 
 **numero_contrato_cobranca** | **float** | Define o número do contrato de cobrança do boleto. | [optional] 
-**beneficiario** | [**\Swagger\Client\Model\RespostaRegistroBoletosBeneficiario**](RespostaRegistroBoletosBeneficiario.md) |  | [optional] 
-**qr_code** | [**\Swagger\Client\Model\RespostaRegistroBoletosQrCode**](RespostaRegistroBoletosQrCode.md) |  | [optional] 
+**beneficiario** | [**\Swagger\Client\ModelBoletoBB\RespostaRegistroBoletosBeneficiario**](RespostaRegistroBoletosBeneficiario.md) |  | [optional] 
+**qr_code** | [**\Swagger\Client\ModelBoletoBB\RespostaRegistroBoletosQrCode**](RespostaRegistroBoletosQrCode.md) |  | [optional] 
 **observacao** | **string** | Orienta quanto ao registro do boleto e o não envio por email. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

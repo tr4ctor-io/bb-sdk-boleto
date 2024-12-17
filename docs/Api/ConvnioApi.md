@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**desativaConsultaBaixaOperacional**](ConvnioApi.md#desativaconsultabaixaoperacional) | **PATCH** /convenios/{id}/desativar-consulta-baixa-operacional | Desativar Consulta Baixa Operacional
 
 # **ativarConsultaBaixaOperacional**
-> \Swagger\Client\Model\InlineResponse2002 ativarConsultaBaixaOperacional($id, $authorization, $gw_dev_app_key)
+> \Swagger\Client\ModelBoletoBB\InlineResponse2002 ativarConsultaBaixaOperacional($id, $authorization, $gw_dev_app_key)
 
 Habilitar Consulta de Baixa Operacional
 
@@ -22,7 +22,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: OAuth2
 $config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ConvnioApi(
+$apiInstance = new Swagger\Client\ApiBoletoBB\ConvnioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\ModelBoletoBB\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **desativaConsultaBaixaOperacional**
-> \Swagger\Client\Model\InlineResponse2002 desativaConsultaBaixaOperacional($id, $authorization, $gw_dev_app_key)
+> \Swagger\Client\ModelBoletoBB\InlineResponse2002 desativaConsultaBaixaOperacional($id, $authorization, $gw_dev_app_key)
 
 Desativar Consulta Baixa Operacional
 
@@ -79,7 +79,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: OAuth2
 $config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ConvnioApi(
+$apiInstance = new Swagger\Client\ApiBoletoBB\ConvnioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\ModelBoletoBB\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

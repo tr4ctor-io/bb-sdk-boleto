@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **data_registro** | **string** | Data a qual foi efetuado o registro do boleto na CIP. | [optional] 
 **data_vencimento** | **string** | Data de vencimento do boleto. | [optional] 
 **valor_original** | **double** | Valor original do boleto indicado quando do registro. | [optional] 
-**agendamento_pagamento** | [**\Swagger\Client\Model\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento**](RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento.md) |  | [optional] 
+**agendamento_pagamento** | [**\Swagger\Client\ModelBoletoBB\RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento**](RespostaBoletosBaixaOperacionalTituloAgendamentoPagamento.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

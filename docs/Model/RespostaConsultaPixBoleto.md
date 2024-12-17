@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **conta_beneficiario** | **int** | Número da conta do beneficiário, sem o dígito verificador. | [optional] 
 **valor_original_titulo_cobranca** | **float** | Valor original do boleto indicado quando do registro. | [optional] 
 **validade_titulo_cobranca** | **string** | Data de validade do boleto. | [optional] 
-**pix** | [**\Swagger\Client\Model\RespostaConsultaPixBoletoPix**](RespostaConsultaPixBoletoPix.md) |  | [optional] 
-**qr_code** | [**\Swagger\Client\Model\RespostaConsultaPixBoletoQrCode**](RespostaConsultaPixBoletoQrCode.md) |  | [optional] 
+**pix** | [**\Swagger\Client\ModelBoletoBB\RespostaConsultaPixBoletoPix**](RespostaConsultaPixBoletoPix.md) |  | [optional] 
+**qr_code** | [**\Swagger\Client\ModelBoletoBB\RespostaConsultaPixBoletoQrCode**](RespostaConsultaPixBoletoQrCode.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

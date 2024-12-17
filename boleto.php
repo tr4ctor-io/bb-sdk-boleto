@@ -53,7 +53,7 @@ $config->setHost("https://api.hm.bb.com.br/cobrancas/v2");
  /*********************************************************************************************
   * Obtendo access token e utilizando no configurador
   * ******************************************************************************************/
- $oauth2Api = new Swagger\Client\Api\Oauth2Api(new GuzzleHttp\Client(), $config);
+ $oauth2Api = new Swagger\Client\ApiBoletoBB\Oauth2Api(new GuzzleHttp\Client(), $config);
 
  try {
      $token = $oauth2Api->gerarAccessToken();
@@ -68,13 +68,13 @@ $config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToke
 
 $client = new GuzzleHttp\Client();
 
-$apiInstance = new Swagger\Client\Api\BoletosApi(
+$apiInstance = new Swagger\Client\ApiBoletoBB\BoletosApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     $client,
     $config
 );
-$body = new \Swagger\Client\Model\RequisicaoRegistroBoletos(
+$body = new \Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletos(
     [
         'numero_convenio' => '3128557',
         'numero_carteira' => '17',
@@ -95,9 +95,9 @@ $body = new \Swagger\Client\Model\RequisicaoRegistroBoletos(
         'indicador_permissao_recebimento_parcial' => 'N',
         'numero_titulo_beneficiario' => '123456',
         'campo_utilizacao_beneficiario' => 'UM TEXTO',
-        'numero_titulo_cliente' => '00031285570100223513',
+        'numero_titulo_cliente' => '00031285570100223516',
         'mensagem_bloqueto_ocorrencia' => 'Outro texto',
-        'desconto' => new Swagger\Client\Model\RequisicaoRegistroBoletosDesconto(
+        'desconto' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosDesconto(
             [
                 'tipo' => '2',
                 'data_expiracao' => '15.12.2024',
@@ -106,20 +106,20 @@ $body = new \Swagger\Client\Model\RequisicaoRegistroBoletos(
         ),
         // 'segundo_desconto' => '',
         // 'terceiro_desconto' => '',
-        'juros_mora' => new Swagger\Client\Model\RequisicaoRegistroBoletosJurosMora(
+        'juros_mora' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosJurosMora(
             [
                 'tipo' => '2',
                 'porcentagem' => '1.00'
             ]
         ),
-        'multa' => new Swagger\Client\Model\RequisicaoRegistroBoletosMulta(
+        'multa' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosMulta(
             [
                 'tipo' => '2',
                 'data' => '16.12.2024',
                 'porcentagem' => '5.00'
             ]
         ),
-        'pagador' => new Swagger\Client\Model\RequisicaoRegistroBoletosPagador(
+        'pagador' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosPagador(
             [
                 "tipo_inscricao" => "1",
                 "numero_inscricao" => "97965940132",
@@ -132,7 +132,7 @@ $body = new \Swagger\Client\Model\RequisicaoRegistroBoletos(
                 "telefone" => "63987654321"
             ]
         ),
-        'beneficiario_final' => new Swagger\Client\Model\RequisicaoRegistroBoletosBeneficiarioFinal(
+        'beneficiario_final' => new Swagger\Client\ModelBoletoBB\RequisicaoRegistroBoletosBeneficiarioFinal(
             [
                 'tipo_inscricao' => '2',
                 'numero_inscricao' => '98959112000179',
@@ -152,6 +152,52 @@ try {
         $gw_dev_app_key
     );
     print_r($result);
+
+    /*
+    Swagger\Client\Model\RespostaRegistroBoletos Object
+    (
+        [container:protected] => Array
+            (
+                [numero] => 00031285570100223515
+                [numero_carteira] => 17
+                [numero_variacao_carteira] => 35
+                [codigo_cliente] => 704950857
+                [linha_digitavel] => 00190000090312855701800223515172499310000012345
+                [codigo_barra_numerico] => 00194993100000123450000003128557010022351517
+                [numero_contrato_cobranca] => 19581316
+                [beneficiario] => Swagger\Client\Model\RespostaRegistroBoletosBeneficiario Object
+                    (
+                        [container:protected] => Array
+                            (
+                                [agencia] => 452
+                                [conta_corrente] => 123873
+                                [tipo_endereco] => 1
+                                [logradouro] => ST AUXILIAR DE GARAGENS RUA 9 LOTE 10
+                                [bairro] => TAGUATINGA NORTE
+                                [cidade] => BRASILIA
+                                [codigo_cidade] => 2000
+                                [uf] => DF
+                                [cep] => 72145760
+                                [indicador_comprovacao] => 0
+                            )
+
+                    )
+
+                [qr_code] => Swagger\Client\Model\RespostaRegistroBoletosQrCode Object
+                    (
+                        [container:protected] => Array
+                            (
+                                [url] => qrcodepix-h.bb.com.br/pix/v2/cobv/bdee1b59-3071-48fb-9536-98fd207a7b80
+                                [tx_id] => BOLETO31285570100223515DATA14122024
+                                [emv] => 00020101021226920014br.gov.bcb.pix2570qrcodepix-h.bb.com.br/pix/v2/cobv/bdee1b59-3071-48fb-9536-98fd207a7b805204000053039865802BR5925MERCEARIA MANASSES PEREIR6008BRASILIA62070503***6304224C
+                            )
+
+                    )
+
+                [observacao] =>
+            )
+
+    )*/
 } catch (Exception $e) {
     echo 'Exception when calling BoletosApi->incluiBoletoBancarioId: ', $e->getMessage(), PHP_EOL;
 }
