@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client;
+namespace Swagger\Client\Boleto;
 
 /**
  * Configuration Class Doc Comment
