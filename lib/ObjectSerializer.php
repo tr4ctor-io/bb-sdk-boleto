@@ -293,7 +293,7 @@ class ObjectSerializer
                 throw new \InvalidArgumentException("Invalid value for enum '$class', must be one of: '$imploded'");
             }
             return $data;
-        } else {
+        } else if (!empty($class)) {
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
@@ -316,6 +316,8 @@ class ObjectSerializer
                 }
             }
             return $instance;
+        } else {
+            return $data;
         }
     }
 }
